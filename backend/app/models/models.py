@@ -1,0 +1,1 @@
+# Este arquivo deixa a pasta routes como um pacote Python

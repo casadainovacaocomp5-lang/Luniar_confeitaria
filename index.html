@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luniar Confeitaria - Doces Artesanais</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>✨ Luniar</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="#encomendas" class="nav-link">Encomendas</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background: linear-gradient(135deg, #ffeef8 0%, #fff5eb 100%);">
+                <div class="slide-content">
+                    <h2 class="hero-subtitle">Bem-vindo à</h2>
+                    <h1 class="hero-title">Luniar Confeitaria</h1>
+                    <p class="hero-text">Transformando momentos em doces memórias</p>
+                    <button class="btn btn-primary">Faça seu pedido</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Nós</h2>
+            <div class="sobre-wrapper">
+                <div class="sobre-text">
+                    <h3>Uma História de Amor e Sabor</h3>
+                    <p>Desde o primeiro bolo até hoje, a Luniar Confeitaria é construída sobre três pilares fundamentais: <strong>qualidade artesanal, ingredientes premium e muito amor</strong>.</p>
+                    <p>Cada receita é criada com dedicação, usando apenas os melhores ingredientes selecionados. Nós acreditamos que a confeitação é uma arte que une pessoas e cria memórias doces.</p>
+                    <div class="valores">
+                        <div class="valor">
+                            <i class="fas fa-heart"></i>
+                            <h4>Amor</h4>
+                            <p>Cada doce é feito com dedicação e carinho</p>
+                        </div>
+                        <div class="valor">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Qualidade</h4>
+                            <p>Ingredientes selecionados e frescos</p>
+                        </div>
+                        <div class="valor">
+                            <i class="fas fa-star"></i>
+                            <h4>Excelência</h4>
+                            <p>Sabor impecável em cada produção</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-birthday-cake"></i>
+                        <p>Foto Artesanal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardápio -->
+    <section id="cardapio" class="cardapio">
+        <div class="container">
+            <h2 class="section-title">Nosso Cardápio</h2>
+            
+            <div class="filtros">
+                <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="bolos">Bolos</button>
+                <button class="filtro-btn" data-filtro="cupcakes">Cupcakes</button>
+                <button class="filtro-btn" data-filtro="doces-finos">Doces Finos</button>
+                <button class="filtro-btn" data-filtro="sobremesas">Sobremesas</button>
+            </div>
+
+            <div class="produtos-grid">
+                <!-- Bolos -->
+                <div class="card-produto" data-categoria="bolos">
+                    <div class="produto-imagem">
+                        <i class="fas fa-cake-candles"></i>
+                    </div>
+                    <h3>Bolo de Chocolate Belga</h3>
+                    <p>Bolo intenso e delicado com três camadas de chocolate premium</p>
+                    <div class="preco">A partir de R$ 45,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="bolos">
+                    <div class="produto-imagem">
+                        <i class="fas fa-cake-candles"></i>
+                    </div>
+                    <h3>Bolo de Morango e Rafinose</h3>
+                    <p>Leveza e frescor em cada porção, com morangos selecionados</p>
+                    <div class="preco">A partir de R$ 50,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="bolos">
+                    <div class="produto-imagem">
+                        <i class="fas fa-cake-candles"></i>
+                    </div>
+                    <h3>Bolo Red Velvet</h3>
+                    <p>Clássico sofisticado com cobertura de cream cheese artesanal</p>
+                    <div class="preco">A partir de R$ 55,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <!-- Cupcakes -->
+                <div class="card-produto" data-categoria="cupcakes">
+                    <div class="produto-imagem">
+                        <i class="fas fa-muffin"></i>
+                    </div>
+                    <h3>Cupcake Baunilha Premium</h3>
+                    <p>Macio e perfumado com calda de baunilha francesa</p>
+                    <div class="preco">R$ 8,50 unidade</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="cupcakes">
+                    <div class="produto-imagem">
+                        <i class="fas fa-muffin"></i>
+                    </div>
+                    <h3>Cupcake Chocolate Trufa</h3>
+                    <p>Intenso e cremoso com calda de trufa belga</p>
+                    <div class="preco">R$ 9,00 unidade</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="cupcakes">
+                    <div class="produto-imagem">
+                        <i class="fas fa-muffin"></i>
+                    </div>
+                    <h3>Cupcake Limão Siciliano</h3>
+                    <p>Fresco e aromático com cobertura de merengue suíço</p>
+                    <div class="preco">R$ 9,00 unidade</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <!-- Doces Finos -->
+                <div class="card-produto" data-categoria="doces-finos">
+                    <div class="produto-imagem">
+                        <i class="fas fa-candy"></i>
+                    </div>
+                    <h3>Macaron Premium</h3>
+                    <p>Macarons artesanais em 5 sabores diferentes</p>
+                    <div class="preco">R$ 4,50 unidade</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="doces-finos">
+                    <div class="produto-imagem">
+                        <i class="fas fa-candy"></i>
+                    </div>
+                    <h3>Brigadeiro Gourmet</h3>
+                    <p>Diversos sabores: chocolate, pistache, cappuccino</p>
+                    <div class="preco">R$ 3,50 unidade</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="doces-finos">
+                    <div class="produto-imagem">
+                        <i class="fas fa-candy"></i>
+                    </div>
+                    <h3>Petit Fours</h3>
+                    <p>Confeitaria francesa minimalista e elegante</p>
+                    <div class="preco">R$ 5,00 unidade</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <!-- Sobremesas -->
+                <div class="card-produto" data-categoria="sobremesas">
+                    <div class="produto-imagem">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3>Pavê Artesanal</h3>
+                    <p>Leve e refrescante, perfeito para celebrações</p>
+                    <div class="preco">A partir de R$ 35,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="sobremesas">
+                    <div class="produto-imagem">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3>Mousse de Chocolate</h3>
+                    <p>Cremosa e aérea com chocolate 70% cacau</p>
+                    <div class="preco">A partir de R$ 30,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="sobremesas">
+                    <div class="produto-imagem">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3>Ninho com Calda de Caramelo</h3>
+                    <p>Doce, crocante e irresistivelmente cremoso</p>
+                    <div class="preco">R$ 22,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2 class="section-title">Galeria de Inspirações</h2>
+            <p class="section-subtitle">Veja alguns de nossos trabalhos anteriores</p>
+            
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <div class="imagem-placeholder">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="imagem-placeholder">
+                        <i class="fas fa-cake-candles"></i>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="imagem-placeholder">
+                        <i class="fas fa-cupcake"></i>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="imagem-placeholder">
+                        <i class="fas fa-candy"></i>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="imagem-placeholder">
+                        <i class="fas fa-muffin"></i>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="imagem-placeholder">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Encomendas -->
+    <section id="encomendas" class="encomendas">
+        <div class="container">
+            <h2 class="section-title">Faça sua Encomenda</h2>
+            <p class="section-subtitle">Personalize seu doce perfeito</p>
+            
+            <form class="formulario-encomenda" id="formularioEncomenda">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefone">Telefone/WhatsApp *</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data da Encomenda *</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full">
+                        <label for="tipo-doce">Tipo de Doce *</label>
+                        <select id="tipo-doce" name="tipo-doce" required>
+                            <option value="">Selecione um tipo</option>
+                            <option value="bolo">Bolo Personalizado</option>
+                            <option value="cupcakes">Cupcakes</option>
+                            <option value="doces-diversos">Cesta de Doces Diversos</option>
+                            <option value="sobremesa">Sobremesa Especial</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full">
+                        <label for="observacoes">Observações Especiais</label>
+                        <textarea id="observacoes" name="observacoes" rows="5" placeholder="Descreva seu doce dos sonhos..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar Encomenda</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Vamos Conversar?</h2>
+            
+            <div class="contato-wrapper">
+                <div class="info-contato">
+                    <div class="info-item">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>(11) 99999-9999</p>
+                        <a href="https://wa.me/5511999999999" class="link-contato">Enviar Mensagem</a>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>@luniar_confeitaria</p>
+                        <a href="https://instagram.com/luniar_confeitaria" class="link-contato">Seguir</a>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Localização</h3>
+                        <p>São Paulo - SP</p>
+                        <a href="#" class="link-contato">Ver no Mapa</a>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Horário</h3>
+                        <p>Seg-Sex: 10h às 19h<br>Sáb: 10h às 18h<br>Dom: Fechado</p>
+                        <a href="#" class="link-contato">Agendar</a>
+                    </div>
+                </div>
+
+                <div class="mapa-placeholder">
+                    <i class="fas fa-map"></i>
+                    <p>Mapa da Localização</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Luniar Confeitaria. Todos os direitos reservados.</p>
+            <p>Feito com <i class="fas fa-heart"></i> para você</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <button class="whatsapp-flutuante" id="whatsappBtn">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

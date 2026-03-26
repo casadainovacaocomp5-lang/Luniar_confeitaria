@@ -1,0 +1,68 @@
+🚀 SERVIDOR PYTHON ATIVO!
+
+✅ STATUS: EM EXECUÇÃO
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 ACESSAR SEU SITE:
+
+   👉 http://localhost:8000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 LOCALIZAÇÃO:
+   Pasta: C:\Users\Aluno\Documents\Luniar_confeitaria
+   Servidor: Python 3.11.9 (http.server)
+   Porta: 8000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ FUNCIONALIDADES:
+   ✓ Servindo index.html
+   ✓ Acesso a CSS (css/style.css)
+   ✓ Acesso a JavaScript (js/script.js)
+   ✓ Acesso a assets
+   ✓ Listagem de diretório
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 PRÓXIMAS AÇÕES:
+
+1. Abra no navegador: http://localhost:8000
+2. Clique em "index.html"
+3. Seu site aparecerá!
+
+OU simplesmente: http://localhost:8000/index.html
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  PARA PARAR O SERVIDOR:
+   Volte ao PowerShell e pressione: Ctrl + C
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICAS:
+
+• Edite o index.html, css/style.css e js/script.js
+• Atualize o navegador (F5) para ver mudanças
+• O servidor serve de forma LIVE
+• Abra Developer Tools (F12) para debug
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔗 BACKEND (se quiser adicionar):
+
+   Veja: backend/INICIO_RAPIDO.md
+   
+   Em outro terminal:
+   cd backend
+   python -m venv venv
+   venv\Scripts\activate  
+   pip install -r requirements.txt
+   python run.py
+   
+   Backend em: http://localhost:5000/api
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ PRONTO! Seu site está online localmente!
