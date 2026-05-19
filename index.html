@@ -36,11 +36,11 @@
     <!-- Home Section -->
     <section id="home" class="hero">
         <div class="hero-slider">
-            <div class="slide active" style="background: linear-gradient(135deg, #ffeef8 0%, #fff5eb 100%);">
+            <div class="slide active">
                 <div class="slide-content">
                     <h2 class="hero-subtitle">Bem-vindo à</h2>
                     <h1 class="hero-title">Luniar Confeitaria</h1>
-                    <p class="hero-text">Transformando momentos em doces memórias</p>
+                    <p class="hero-text">Transformando momentos em doces e memórias</p>
                     <button class="btn btn-primary">Faça seu pedido</button>
                 </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="sobre-wrapper">
                 <div class="sobre-text">
                     <h3>Uma História de Amor e Sabor</h3>
-                    <p>Desde o primeiro bolo até hoje, a Luniar Confeitaria é construída sobre três pilares fundamentais: <strong>qualidade artesanal, ingredientes premium e muito amor</strong>.</p>
+                    <p>Desde o primeiro bolo até hoje, a Luniar Confeitaria é construída sobre um pilar fundamental: <strong>muito amor na hora da mão na massa</strong>.</p>
                     <p>Cada receita é criada com dedicação, usando apenas os melhores ingredientes selecionados. Nós acreditamos que a confeitação é uma arte que une pessoas e cria memórias doces.</p>
                     <div class="valores">
                         <div class="valor">
@@ -93,132 +93,83 @@
                 <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
                 <button class="filtro-btn" data-filtro="bolos">Bolos</button>
                 <button class="filtro-btn" data-filtro="cupcakes">Cupcakes</button>
+                <button class="filtro-btn" data-filtro="tortas">Tortas</button>
                 <button class="filtro-btn" data-filtro="doces-finos">Doces Finos</button>
                 <button class="filtro-btn" data-filtro="sobremesas">Sobremesas</button>
             </div>
 
             <div class="produtos-grid">
-                <!-- Bolos -->
-                <div class="card-produto" data-categoria="bolos">
-                    <div class="produto-imagem">
-                        <i class="fas fa-cake-candles"></i>
-                    </div>
-                    <h3>Bolo de Chocolate Belga</h3>
-                    <p>Bolo intenso e delicado com três camadas de chocolate premium</p>
-                    <div class="preco">A partir de R$ 45,00</div>
-                    <button class="btn btn-outline">Orçamento</button>
-                </div>
-
-                <div class="card-produto" data-categoria="bolos">
-                    <div class="produto-imagem">
-                        <i class="fas fa-cake-candles"></i>
-                    </div>
-                    <h3>Bolo de Morango e Rafinose</h3>
-                    <p>Leveza e frescor em cada porção, com morangos selecionados</p>
-                    <div class="preco">A partir de R$ 50,00</div>
-                    <button class="btn btn-outline">Orçamento</button>
-                </div>
-
-                <div class="card-produto" data-categoria="bolos">
-                    <div class="produto-imagem">
-                        <i class="fas fa-cake-candles"></i>
-                    </div>
-                    <h3>Bolo Red Velvet</h3>
-                    <p>Clássico sofisticado com cobertura de cream cheese artesanal</p>
-                    <div class="preco">A partir de R$ 55,00</div>
-                    <button class="btn btn-outline">Orçamento</button>
-                </div>
-
-                <!-- Cupcakes -->
-                <div class="card-produto" data-categoria="cupcakes">
-                    <div class="produto-imagem">
-                        <i class="fas fa-muffin"></i>
-                    </div>
-                    <h3>Cupcake Baunilha Premium</h3>
-                    <p>Macio e perfumado com calda de baunilha francesa</p>
-                    <div class="preco">R$ 8,50 unidade</div>
-                    <button class="btn btn-outline">Orçamento</button>
-                </div>
-
-                <div class="card-produto" data-categoria="cupcakes">
-                    <div class="produto-imagem">
-                        <i class="fas fa-muffin"></i>
-                    </div>
-                    <h3>Cupcake Chocolate Trufa</h3>
-                    <p>Intenso e cremoso com calda de trufa belga</p>
-                    <div class="preco">R$ 9,00 unidade</div>
-                    <button class="btn btn-outline">Orçamento</button>
-                </div>
-
-                <div class="card-produto" data-categoria="cupcakes">
-                    <div class="produto-imagem">
-                        <i class="fas fa-muffin"></i>
-                    </div>
-                    <h3>Cupcake Limão Siciliano</h3>
-                    <p>Fresco e aromático com cobertura de merengue suíço</p>
-                    <div class="preco">R$ 9,00 unidade</div>
-                    <button class="btn btn-outline">Orçamento</button>
-                </div>
-
                 <!-- Doces Finos -->
                 <div class="card-produto" data-categoria="doces-finos">
                     <div class="produto-imagem">
-                        <i class="fas fa-candy"></i>
+                        <i class="fas fa-cookie"></i>
                     </div>
-                    <h3>Macaron Premium</h3>
-                    <p>Macarons artesanais em 5 sabores diferentes</p>
-                    <div class="preco">R$ 4,50 unidade</div>
+                    <h3>Brownie</h3>
+                    <p>Brownie delicioso e cremoso</p>
+                    <div class="preco">R$ 8,00</div>
                     <button class="btn btn-outline">Orçamento</button>
                 </div>
 
+                <!-- Tortas -->
+                <div class="card-produto" data-categoria="tortas">
+                    <div class="produto-imagem">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <h3>Torta Cookie de Ninho com Nutela</h3>
+                    <p>Torta deliciosa com cookies, ninho crocante e cobertura de nutela</p>
+                    <div class="preco">R$ 16,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="tortas">
+                    <div class="produto-imagem">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <h3>Torta Cookie</h3>
+                    <p>Torta crocante com cookies premium e recheio delicioso</p>
+                    <div class="preco">R$ 16,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="tortas">
+                    <div class="produto-imagem">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <h3>Torta Cookie de Brigadeiro</h3>
+                    <p>Torta deliciosa com cookies crocantes e recheio cremoso de brigadeiro</p>
+                    <div class="preco">R$ 16,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <div class="card-produto" data-categoria="tortas">
+                    <div class="produto-imagem">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <h3>Torta Cookie de Doce de Leite</h3>
+                    <p>Torta crocante com cookies e doce de leite cremoso</p>
+                    <div class="preco">R$ 16,00</div>
+                    <button class="btn btn-outline">Orçamento</button>
+                </div>
+
+                <!-- Doces Finos (continuação) -->
                 <div class="card-produto" data-categoria="doces-finos">
                     <div class="produto-imagem">
                         <i class="fas fa-candy"></i>
                     </div>
-                    <h3>Brigadeiro Gourmet</h3>
-                    <p>Diversos sabores: chocolate, pistache, cappuccino</p>
-                    <div class="preco">R$ 3,50 unidade</div>
+                    <h3>Palha Italiana</h3>
+                    <p>Doce crocante e delicado feito com calda de açúcar caramelizada</p>
+                    <div class="preco">R$ 8,00</div>
                     <button class="btn btn-outline">Orçamento</button>
                 </div>
 
-                <div class="card-produto" data-categoria="doces-finos">
+                <!-- Salgados -->
+                <div class="card-produto" data-categoria="salgados">
                     <div class="produto-imagem">
-                        <i class="fas fa-candy"></i>
+                        <i class="fas fa-breadslice"></i>
                     </div>
-                    <h3>Petit Fours</h3>
-                    <p>Confeitaria francesa minimalista e elegante</p>
-                    <div class="preco">R$ 5,00 unidade</div>
-                    <button class="btn btn-outline">Orçamento</button>
-                </div>
-
-                <!-- Sobremesas -->
-                <div class="card-produto" data-categoria="sobremesas">
-                    <div class="produto-imagem">
-                        <i class="fas fa-ice-cream"></i>
-                    </div>
-                    <h3>Pavê Artesanal</h3>
-                    <p>Leve e refrescante, perfeito para celebrações</p>
-                    <div class="preco">A partir de R$ 35,00</div>
-                    <button class="btn btn-outline">Orçamento</button>
-                </div>
-
-                <div class="card-produto" data-categoria="sobremesas">
-                    <div class="produto-imagem">
-                        <i class="fas fa-ice-cream"></i>
-                    </div>
-                    <h3>Mousse de Chocolate</h3>
-                    <p>Cremosa e aérea com chocolate 70% cacau</p>
-                    <div class="preco">A partir de R$ 30,00</div>
-                    <button class="btn btn-outline">Orçamento</button>
-                </div>
-
-                <div class="card-produto" data-categoria="sobremesas">
-                    <div class="produto-imagem">
-                        <i class="fas fa-ice-cream"></i>
-                    </div>
-                    <h3>Ninho com Calda de Caramelo</h3>
-                    <p>Doce, crocante e irresistivelmente cremoso</p>
-                    <div class="preco">R$ 22,00</div>
+                    <h3>Sanduíche Natural</h3>
+                    <p>Sanduíche fresco e saudável com ingredientes selecionados</p>
+                    <div class="preco">R$ 10,00</div>
                     <button class="btn btn-outline">Orçamento</button>
                 </div>
             </div>
@@ -324,7 +275,7 @@
     <!-- Contato -->
     <section id="contato" class="contato">
         <div class="container">
-            <h2 class="section-title">Vamos Conversar?</h2>
+            <h2 class="section-title">Vem falar com a gente</h2>
             
             <div class="contato-wrapper">
                 <div class="info-contato">
@@ -334,7 +285,7 @@
                         </div>
                         <h3>WhatsApp</h3>
                         <p>(11) 99999-9999</p>
-                        <a href="https://wa.me/5511999999999" class="link-contato">Enviar Mensagem</a>
+                        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="link-contato">Enviar Mensagem</a>
                     </div>
 
                     <div class="info-item">
@@ -343,7 +294,7 @@
                         </div>
                         <h3>Instagram</h3>
                         <p>@luniar_confeitaria</p>
-                        <a href="https://instagram.com/luniar_confeitaria" class="link-contato">Seguir</a>
+                        <a href="https://instagram.com/luniar_confeitaria" target="_blank" rel="noopener noreferrer" class="link-contato">Seguir</a>
                     </div>
 
                     <div class="info-item">
@@ -352,7 +303,7 @@
                         </div>
                         <h3>Localização</h3>
                         <p>São Paulo - SP</p>
-                        <a href="#" class="link-contato">Ver no Mapa</a>
+                        <a href="https://maps.google.com/maps/search/luniar+confeitaria+sao+paulo" target="_blank" rel="noopener noreferrer" class="link-contato">Ver no Mapa</a>
                     </div>
 
                     <div class="info-item">
@@ -361,7 +312,7 @@
                         </div>
                         <h3>Horário</h3>
                         <p>Seg-Sex: 10h às 19h<br>Sáb: 10h às 18h<br>Dom: Fechado</p>
-                        <a href="#" class="link-contato">Agendar</a>
+                        <button class="link-contato" onclick="alert('Agende sua encomenda através do WhatsApp!')">Agendar</button>
                     </div>
                 </div>
 

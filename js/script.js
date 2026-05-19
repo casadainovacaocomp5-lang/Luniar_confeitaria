@@ -1,3 +1,9 @@
+// ========== Configuração ==========
+const CONFIG = {
+    PHONE: '5511999999999', // Substituir com o número real
+    INSTAGRAM: '@luniar_confeitaria'
+};
+
 // ========== Elementos do DOM ==========
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -8,46 +14,50 @@ const cardsProdutos = document.querySelectorAll('.card-produto');
 const navLinksArray = document.querySelectorAll('.nav-link');
 
 // ========== Menu Mobile ==========
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-});
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+}
 
 // Fechar menu ao clicar em um link
 navLinksArray.forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuToggle.classList.remove('active');
+        if (navLinks) navLinks.classList.remove('active');
+        if (menuToggle) menuToggle.classList.remove('active');
     });
 });
 
 // ========== Botão WhatsApp Flutuante ==========
-whatsappBtn.addEventListener('click', () => {
-    const phone = '5511999999999'; // Substituir com o número real
-    const message = encodeURIComponent('Olá! Gostaria de fazer uma encomenda na Luniar Confeitaria.');
-    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
-});
+if (whatsappBtn) {
+    whatsappBtn.addEventListener('click', () => {
+        const message = encodeURIComponent('Olá! Gostaria de fazer uma encomenda na Luniar Confeitaria.');
+        window.open(`https://wa.me/${CONFIG.PHONE}?text=${message}`, '_blank');
+    });
+}
 
 // ========== Formulário de Encomendas ==========
-formularioEncomenda.addEventListener('submit', (e) => {
-    e.preventDefault();
+if (formularioEncomenda) {
+    formularioEncomenda.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    // Obter dados do formulário
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const telefone = document.getElementById('telefone').value;
-    const data = document.getElementById('data').value;
-    const tipoDoce = document.getElementById('tipo-doce').value;
-    const observacoes = document.getElementById('observacoes').value;
+        // Obter dados do formulário
+        const nome = document.getElementById('nome')?.value || '';
+        const email = document.getElementById('email')?.value || '';
+        const telefone = document.getElementById('telefone')?.value || '';
+        const data = document.getElementById('data')?.value || '';
+        const tipoDoce = document.getElementById('tipo-doce')?.value || '';
+        const observacoes = document.getElementById('observacoes')?.value || '';
 
-    // Validação básica
-    if (!nome || !email || !telefone || !data || !tipoDoce) {
-        alert('Por favor, preencha todos os campos obrigatórios.');
-        return;
-    }
+        // Validação básica
+        if (!nome || !email || !telefone || !data || !tipoDoce) {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return;
+        }
 
-    // Criar mensagem para WhatsApp
-    const mensagem = `
+        // Criar mensagem para WhatsApp
+        const mensagem = `
 *NOVA ENCOMENDA - LUNIAR CONFEITARIA*
 
 *Nome:* ${nome}
@@ -58,19 +68,19 @@ formularioEncomenda.addEventListener('submit', (e) => {
 *Observações:* ${observacoes || 'Nenhuma'}
 
 Obrigado por escolher a Luniar Confeitaria!
-    `.trim();
+        `.trim();
 
-    // Enviar via WhatsApp
-    const phone = '5511999999999'; // Substituir com o número real
-    const mensagemCodificada = encodeURIComponent(mensagem);
-    window.open(`https://wa.me/${phone}?text=${mensagemCodificada}`, '_blank');
+        // Enviar via WhatsApp
+        const mensagemCodificada = encodeURIComponent(mensagem);
+        window.open(`https://wa.me/${CONFIG.PHONE}?text=${mensagemCodificada}`, '_blank');
 
-    // Limpar formulário
-    formularioEncomenda.reset();
-    
-    // Mostrar mensagem de sucesso
-    mostrarMensagemSucesso();
-});
+        // Limpar formulário
+        formularioEncomenda.reset();
+        
+        // Mostrar mensagem de sucesso
+        mostrarMensagemSucesso();
+    });
+}
 
 // Função para formatar data
 function formatarData(date) {
@@ -110,31 +120,30 @@ function mostrarMensagemSucesso() {
 }
 
 // ========== Filtro de Cardápio ==========
-filtroBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // Remover classe ativo de todos os botões
-        filtroBtns.forEach(b => b.classList.remove('ativo'));
-        
-        // Adicionar classe ativo ao botão clicado
-        btn.classList.add('ativo');
-
-        // Obter filtro
-        const filtro = btn.getAttribute('data-filtro');
-
-        // Filtrar cards
-        cardsProdutos.forEach(card => {
-            if (filtro === 'todos') {
-                card.style.display = 'block';
-                card.classList.add('fade-in');
-            } else {
+document.addEventListener('DOMContentLoaded', () => {
+    const filtroBtns = document.querySelectorAll('.filtro-btn');
+    const cards = document.querySelectorAll('.card-produto');
+    
+    filtroBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filtroSelecionado = this.getAttribute('data-filtro');
+            
+            // Remover ativo de todos
+            filtroBtns.forEach(b => b.classList.remove('ativo'));
+            
+            // Marcar este como ativo
+            this.classList.add('ativo');
+            
+            // Mostrar/esconder cards
+            cards.forEach(card => {
                 const categoria = card.getAttribute('data-categoria');
-                if (categoria === filtro) {
+                
+                if (filtroSelecionado === 'todos' || categoria === filtroSelecionado) {
                     card.style.display = 'block';
-                    card.classList.add('fade-in');
                 } else {
                     card.style.display = 'none';
                 }
-            }
+            });
         });
     });
 });
@@ -192,18 +201,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========== Botões "Faça seu pedido" e "Orçamento" ==========
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        if (btn.textContent.includes('Faça seu pedido') || btn.textContent.includes('Orçamento')) {
-            e.preventDefault();
-            
-            const tipoDoce = btn.closest('.card-produto')?.querySelector('h3')?.textContent || 'Solicitação de Orçamento';
-            
-            const phone = '5511999999999'; // Substituir com o número real
-            const mensagem = encodeURIComponent(`Olá! Gostaria de saber mais sobre: ${tipoDoce}`);
-            
-            window.open(`https://wa.me/${phone}?text=${mensagem}`, '_blank');
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            if (btn.textContent.includes('Faça seu pedido') || btn.textContent.includes('Orçamento')) {
+                e.preventDefault();
+                
+                const tipoDoce = btn.closest('.card-produto')?.querySelector('h3')?.textContent || 'Solicitação de Orçamento';
+                const mensagem = encodeURIComponent(`Olá! Gostaria de saber mais sobre: ${tipoDoce}`);
+                
+                window.open(`https://wa.me/${CONFIG.PHONE}?text=${mensagem}`, '_blank');
+            }
+        });
     });
 });
 
