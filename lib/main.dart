@@ -43,49 +43,56 @@ class _LuniarHomePageState extends State<LuniarHomePage> {
       'descricao': 'Brownie delicioso e cremoso',
       'preco': 'R\$ 8,00',
       'categoria': 'doces-finos',
-      'icon': '🍪'
+      'icon': '🍪',
+      'imagem': 'assets/images/brownie.png'
     },
     {
       'nome': 'Torta Cookie de Ninho com Nutela',
       'descricao': 'Torta deliciosa com cookies, ninho crocante e cobertura de nutela',
       'preco': 'R\$ 16,00',
       'categoria': 'tortas',
-      'icon': '🍪'
+      'icon': '🍪',
+      'imagem': 'assets/images/torta_cookie_ninho_nutela.png'
     },
     {
       'nome': 'Torta Cookie',
       'descricao': 'Torta crocante com cookies premium e recheio delicioso',
       'preco': 'R\$ 16,00',
       'categoria': 'tortas',
-      'icon': '🍪'
+      'icon': '🍪',
+      'imagem': 'assets/images/torta_cookie.png'
     },
     {
       'nome': 'Torta Cookie de Brigadeiro',
       'descricao': 'Torta deliciosa com cookies crocantes e recheio cremoso de brigadeiro',
       'preco': 'R\$ 16,00',
       'categoria': 'tortas',
-      'icon': '🍪'
+      'icon': '🍪',
+      'imagem': 'assets/images/torta_cookie_brigadeiro.png'
     },
     {
       'nome': 'Torta Cookie de Doce de Leite',
       'descricao': 'Torta crocante com cookies e doce de leite cremoso',
       'preco': 'R\$ 16,00',
       'categoria': 'tortas',
-      'icon': '🍪'
+      'icon': '🍪',
+      'imagem': 'assets/images/torta_cookie_doce_leite.png'
     },
     {
       'nome': 'Palha Italiana',
       'descricao': 'Doce crocante e delicado feito com calda de açúcar caramelizada',
       'preco': 'R\$ 8,00',
       'categoria': 'doces-finos',
-      'icon': '🍬'
+      'icon': '🍬',
+      'imagem': 'assets/images/palha_italiana.png'
     },
     {
       'nome': 'Sanduíche Natural',
       'descricao': 'Sanduíche fresco e saudável com ingredientes selecionados',
       'preco': 'R\$ 10,00',
       'categoria': 'salgados',
-      'icon': '🥪'
+      'icon': '🥪',
+      'imagem': 'assets/images/sanduiche_natural.png'
     },
   ];
 
@@ -549,16 +556,28 @@ class _LuniarHomePageState extends State<LuniarHomePage> {
             Container(
               height: 120,
               decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [Color(0xFFff6b9d), Color(0xFFc44569)],
-                ),
                 borderRadius: BorderRadius.circular(12),
+                color: const Color(0xFF2a2a2a),
               ),
               child: Center(
-                child: Text(
-                  produto['icon']!,
-                  style: const TextStyle(fontSize: 50),
-                ),
+                child: produto.containsKey('imagem') && produto['imagem']!.isNotEmpty
+                    ? ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.asset(
+                          produto['imagem']!,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Text(
+                              produto['icon']!,
+                              style: const TextStyle(fontSize: 50),
+                            );
+                          },
+                        ),
+                      )
+                    : Text(
+                        produto['icon']!,
+                        style: const TextStyle(fontSize: 50),
+                      ),
               ),
             ),
             const SizedBox(height: 15),

@@ -18,3 +18,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  
+  assets:
+    - assets/images/brownie.png
+    - assets/images/palha_italiana.png
+    - assets/images/sanduiche_natural.png
+    - assets/images/torta_cookie.png
+    - assets/images/torta_cookie_brigadeiro.png
+    - assets/images/torta_cookie_doce_leite.png
+    - assets/images/torta_cookie_ninho_nutela.png

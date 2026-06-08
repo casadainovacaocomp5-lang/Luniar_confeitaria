@@ -1,36 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <base href="$FLUTTER_BASE_HREF">
     <meta charset="UTF-8">
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta name="description" content="Luniar Confeitaria - App Flutter">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Luniar Confeitaria">
-    <link rel="apple-touch-icon" href="icons/Icon-192.png">
-    <link rel="icon" type="image/png" href="favicon.png"/>
-    <title>Luniar Confeitaria</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" type="text/css" href="splash/style.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="description" content="Luniar Confeitaria - Transformando momentos em doces e memórias">
     <meta name="theme-color" content="#ff6b9d">
-    <script defer src="flutter.js"></script>
+    <title>Luniar Confeitaria</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-      window.addEventListener('hashchange', () { });
-      window.addEventListener('load', function(ev) {
-        _flutter.loader.loadEntrypoint({
-          serviceWorkerVersion: null,
-          onEntrypointLoaded: function(engineInitializer) {
-            engineInitializer.initializeEngine().then(function(appRunner) {
-              appRunner.runApp();
-            });
-          }
-        });
-      });
-    </script>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span class="brand-icon">✨</span>
+                <span class="brand-name">Luniar</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#encomendas">Encomendas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Bem-vindo à</p>
+            <h1 class="hero-title">Luniar Confeitaria</h1>
+            <p class="hero-description">Transformando momentos em doces e memórias</p>
+            <button class="btn btn-primary" onclick="scrollToSection('cardapio')">Faça seu pedido</button>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Nós</h2>
+            <div class="section-line"></div>
+            
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h3 class="sobre-subtitle">Uma História de Amor e Sabor</h3>
+                    <p class="sobre-paragraph">
+                        Desde o primeiro bolo até hoje, a Luniar Confeitaria é construída sobre um pilar fundamental: muito amor na hora da mão na massa.
+                    </p>
+                    <p class="sobre-paragraph">
+                        Cada receita é criada com dedicação, usando apenas os melhores ingredientes selecionados. Nós acreditamos que a confeitação é uma arte que une pessoas e cria memórias doces.
+                    </p>
+                    
+                    <div class="valores-container">
+                        <div class="valor-card">
+                            <span class="valor-icon">❤️</span>
+                            <h4>Amor</h4>
+                            <p>Cada doce é feito com dedicação e carinho</p>
+                        </div>
+                        <div class="valor-card">
+                            <span class="valor-icon">🌿</span>
+                            <h4>Qualidade</h4>
+                            <p>Ingredientes selecionados e frescos</p>
+                        </div>
+                        <div class="valor-card">
+                            <span class="valor-icon">⭐</span>
+                            <h4>Excelência</h4>
+                            <p>Sabor impecável em cada produção</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sobre-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-emoji">🎂</span>
+                        <p>Foto Artesanal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="cardapio">
+        <div class="container">
+            <h2 class="section-title">Nosso Cardápio</h2>
+            
+            <div class="filtros">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="tortas">Tortas</button>
+                <button class="filter-btn" data-filter="doces-finos">Doces Finos</button>
+                <button class="filter-btn" data-filter="salgados">Salgados</button>
+            </div>
+            
+            <div class="produtos-grid" id="produtosGrid">
+                <!-- Os produtos serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2 class="section-title">Galeria</h2>
+            <div class="section-line"></div>
+            
+            <div class="galeria-grid" id="galeriaGrid">
+                <!-- A galeria será preenchida via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ENCOMENDAS -->
+    <section id="encomendas" class="encomendas">
+        <div class="container">
+            <h2 class="section-title">Fazer uma Encomenda</h2>
+            <div class="section-line"></div>
+            
+            <div class="encomendas-content">
+                <div class="encomendas-info">
+                    <h3>Perfeito para Você!</h3>
+                    <p>Eventos especiais, celebrações ou apenas um desejo de doçura? Nós temos a solução perfeita para você.</p>
+                    <ul class="encomendas-list">
+                        <li>🎂 Bolos personalizados</li>
+                        <li>🧁 Cupcakes decorados</li>
+                        <li>🍰 Tortas artesanais</li>
+                        <li>🍬 Doces finos</li>
+                        <li>🎉 Kits para festas</li>
+                    </ul>
+                </div>
+                
+                <form class="encomendas-form" id="encomendaForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Descreva seu pedido especial" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Encomenda</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="section-line"></div>
+            
+            <div class="contato-grid">
+                <div class="contato-card">
+                    <span class="contato-icon">💬</span>
+                    <h4>WhatsApp</h4>
+                    <p>(11) 99999-9999</p>
+                    <a href="https://wa.me/5511999999999" class="btn btn-secondary" target="_blank">Abrir WhatsApp</a>
+                </div>
+                
+                <div class="contato-card">
+                    <span class="contato-icon">📷</span>
+                    <h4>Instagram</h4>
+                    <p>@luniar_confeitaria</p>
+                    <a href="https://instagram.com/luniar_confeitaria" class="btn btn-secondary" target="_blank">Seguir</a>
+                </div>
+                
+                <div class="contato-card">
+                    <span class="contato-icon">📍</span>
+                    <h4>Localização</h4>
+                    <p>São Paulo - SP</p>
+                    <a href="https://maps.google.com/?q=São+Paulo,+SP" class="btn btn-secondary" target="_blank">Ver no Mapa</a>
+                </div>
+            </div>
+            
+            <div class="mapa-container">
+                <h3>Mapa da Localização</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.4449999999997!2d-46.73!3d-23.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa699%3A0xffff4ad529864!2sSão%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>✨ Luniar Confeitaria</h4>
+                <p>Transformando momentos em doces e memórias</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="https://instagram.com/luniar_confeitaria" target="_blank">Instagram</a></li>
+                    <li><a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luniar Confeitaria. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" title="Abrir WhatsApp">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
