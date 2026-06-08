@@ -1,6 +1,6 @@
 // ========== Configuração ==========
 const CONFIG = {
-    PHONE: '5511999999999', // Substituir com o número real
+    PHONE: '5521920001366', // Substituir com o número real
     INSTAGRAM: '@luniar_confeitaria'
 };
 
